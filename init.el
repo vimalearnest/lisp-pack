@@ -1,16 +1,14 @@
 (install-packs '(;; to code in common-lisp
-                 slime
-                 slime-repl
+                 ;;slime
+                 ;;slime-repl
                  ediff
                  hideshow))
 
 (require 'hideshow)
 
 ;; common-lisp setup
-
-;;(load (expand-file-name "~/repo/perso/dot-files/quicklisp/slime-helper.el"))
-;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "/usr/bin/clisp")
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+(setq inferior-lisp-program "/usr/local/bin/sbcl")
 
 ;; add paredit mode to different lisp modes
 (dolist (hook '(emacs-lisp-mode-hook
